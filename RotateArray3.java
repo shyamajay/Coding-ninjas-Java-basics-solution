@@ -14,15 +14,13 @@ public class RotateArray3 {
 			arr[n-d-i-1] = temp;
 		}
 		
-		int k = 0,j=1;
-		while(d/2 > 0)
+		int j=1;
+		for(int i = n-d; i < (n+d)/2;i++)
 		{
-			int temp = arr[n-d];
-			arr[n-d] = arr[n-k-1];
-			arr[n-k-1] = temp;
-			d--;
+			int temp = arr[n-j];
+			arr[n-j] = arr[i];
+			arr[i] = temp;
 			j++;
-			k++;
 		}
 		
 		return arr;
